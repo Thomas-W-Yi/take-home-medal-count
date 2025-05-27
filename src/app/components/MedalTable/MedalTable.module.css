@@ -1,0 +1,5 @@
+/* src/app/components/MedalTable/MedalTable.module.css */
+.table {
+  width: 600px !important;
+  height: 800px !important;
+}

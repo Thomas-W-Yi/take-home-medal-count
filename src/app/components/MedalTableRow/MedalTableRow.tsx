@@ -23,7 +23,7 @@ export default function MedalTableRow({
   return (
     <tr className={styles.row}>
       <td className={styles.rankCell}>
-        <p>{rank}</p>
+        <span>{rank}</span>
         <span
           className={styles.flag}
           style={{
@@ -35,7 +35,7 @@ export default function MedalTableRow({
             display: 'inline-block',
           }}
         />
-        <p>{code}</p>
+        <span>{code}</span>
       </td>
       <td className={styles.cell}>{gold}</td>
       <td className={styles.cell}>{silver}</td>
