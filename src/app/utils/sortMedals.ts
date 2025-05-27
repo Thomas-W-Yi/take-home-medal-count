@@ -1,6 +1,6 @@
 export type SortType = 'gold' | 'silver' | 'bronze' | 'total';
 
-export const SortMedals = (data: any[], sort: SortType) => {
+export const SortMedals = (data: any[], sort: SortType | undefined) => {
   return [...data]
     .sort((a, b) => {
       if (sort === 'total') {
