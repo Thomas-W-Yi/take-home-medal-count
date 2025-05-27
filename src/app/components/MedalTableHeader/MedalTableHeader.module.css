@@ -1,0 +1,29 @@
+/* MedalTableHeader.module.css */
+.headerRow {
+  @apply border-b border-gray-400;
+}
+
+.headerCell {
+  @apply py-2 px-4 text-center font-bold cursor-pointer;
+}
+
+.goldMedal {
+  @apply inline-block rounded-full;
+  width: 16px;
+  height: 16px;
+  background-color: #ffd700;
+}
+
+.silverMedal {
+  @apply inline-block rounded-full;
+  width: 16px;
+  height: 16px;
+  background-color: #c0c0c0;
+}
+
+.bronzeMedal {
+  @apply inline-block rounded-full;
+  width: 16px;
+  height: 16px;
+  background-color: #cd7f32;
+}
