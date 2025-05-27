@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
 ## Getting Started
 
-First, run the development server:
+First, make sure node version is 20 then install all the packages, run the development server (nvm use 20):
 
 ```bash
+npm i
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+You can run the following scripts using npm:
 
-## Learn More
+- `npm run build` - Build the application for production
+- `npm run start` - Sgtart the production server
+- `npm run lint` - Lint and auto-fix code
+- `npm run test` - Run unit tests with Jest
+- `npm run format` - Format code with Prettier
+- `npm run format:check` - Check code formatting
 
-To learn more about Next.js, take a look at the following resources:
+First, run the development server (nvm use 20):
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Limitations & Next Steps
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **State Management:**  
+  This project does not use Context or Redux for state management, as global state is minimal and such solutions would be overkill for the current requirements.
 
-## Deploy on Vercel
+- **Hardcoded Values:**  
+  Some values in the codebase are hardcoded and should be replaced with dynamic logic as requirements become clearer.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **API Calls:**  
+  API calls are currently mocked using `medals.json`. Replace these mocks with real API endpoints when backend integration is ready.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Component Design:**  
+  Most components are basic placeholders. They require improved design and clearer requirements to be fully implemented.
+
+- **Styling Approach:**  
+  Tailwind CSS is used for styling, but it can become verbose and less flexible for dynamic style variations. Consider migrating to a more scalable solution like [styled-components](https://styled-components.com/) or another CSS-in-JS library.
+
+- **Page Structure:**  
+  The project lacks a complete page structure. Add a header and footer to provide a consistent layout across all pages.
+
+  - **E2E test with Cypress:**  
+    The project lacks E2E test since it's only a FE only at the moment. Need setup proper E2E test with Cypress.
+
+---

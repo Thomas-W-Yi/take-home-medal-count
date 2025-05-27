@@ -1,19 +1,24 @@
-import type { Metadata } from 'next';
+'use client';
+
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { ReactNode, useState } from 'react';
+import ErrorBoundary from './components/ErrorBoundary';
 import './globals.css';
 
-export const metadata: Metadata = {
-  title: 'Medal Count App',
-  description: 'A simple app to track medal counts',
-};
+export default function RootLayout({ children }: { children: ReactNode }) {
+  const [queryClient] = useState(() => new QueryClient());
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <QueryClientProvider client={queryClient}>
+          <ErrorBoundary
+            fallback={<div>Oops! An unexpected error occurred.</div>}
+          >
+            {children}
+          </ErrorBoundary>
+        </QueryClientProvider>
+      </body>
     </html>
   );
 }
