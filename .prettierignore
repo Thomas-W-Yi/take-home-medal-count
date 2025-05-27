@@ -1,0 +1,13 @@
+**/build
+**/coverage
+**/.storybook
+**/.loki
+**/.vscode
+**/*.html
+**/.git
+**/.svn
+**/.hg
+**/node_modules
+**/.next
+**/*.hbs
+**/dist
