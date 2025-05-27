@@ -42,7 +42,7 @@ First, run the development server (nvm use 20):
 - **Page Structure:**  
   The project lacks a complete page structure. Add a header and footer to provide a consistent layout across all pages.
 
-  - **E2E test with Cypress:**  
-    The project lacks E2E test since it's only a FE only at the moment. Need setup proper E2E test with Cypress.
+- **E2E test with Cypress:**  
+  The project lacks E2E test since it's only a FE only at the moment. Need setup proper E2E test with Cypress.
 
 ---
