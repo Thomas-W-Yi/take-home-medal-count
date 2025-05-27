@@ -43,8 +43,8 @@ describe('MedalTableHeader', () => {
       </table>
     );
 
-    expect(screen.getByTitle('Gold').className).toContain('activeSort');
-    expect(screen.getByTitle('Silver').className).not.toContain('activeSort');
+    expect(screen.getByTitle('Gold')).toHaveClass('activeSort');
+    expect(screen.getByTitle('Silver')).not.toHaveClass('activeSort');
 
     rerender(
       <table>
@@ -52,8 +52,8 @@ describe('MedalTableHeader', () => {
       </table>
     );
 
-    expect(screen.getByTitle('Silver').className).toContain('activeSort');
-    expect(screen.getByTitle('Gold').className).not.toContain('activeSort');
+    expect(screen.getByTitle('Silver')).toHaveClass('activeSort');
+    expect(screen.getByTitle('Gold')).not.toHaveClass('activeSort');
   });
 
   it('renders without errors when no sort is selected', () => {

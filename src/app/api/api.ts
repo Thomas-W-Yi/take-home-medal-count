@@ -22,8 +22,7 @@ const api = axios.create({
   baseURL: 'http://localhost:3000',
 });
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function handleAxiosFailure(error: any) {
+export function handleAxiosFailure(error) {
   /*
     If the request failed for any reason, process the error and extract the error message and error code
     The error is formatted as follows:
