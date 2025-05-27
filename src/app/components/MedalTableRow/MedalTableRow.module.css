@@ -1,0 +1,17 @@
+/* MedalTableRow.module.css */
+.row {
+  @apply border-b border-gray-300;
+}
+
+.cell {
+  @apply py-2 px-4 text-center;
+}
+
+.rankCell {
+  @apply flex flex-row space-x-2 py-2 px-4;
+  width: 100px;
+}
+
+.flag {
+  @apply inline-block;
+}
