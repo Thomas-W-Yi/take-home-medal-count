@@ -1,10 +1,25 @@
 ## Getting Started
 
-First, make sure node version is 20 then install all the packages, run the development server (nvm use 20):
+1. Clone the repository:
 
 ```bash
+git clone git@github.com:Thomas-W-Yi/take-home-medal-count.git
+cd take-home-medal-count
+```
+
+2. Install dependencies:
+
+```bash
+nvm use 20
 npm i
+```
+
+3. Run the development server:
+
+```bash
 npm run dev
+# or
+yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -13,9 +28,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 - Sortable Table: Users can sort countries by 'Gold', 'Silver', 'Bronze', or 'Total' medals.
 
-- URL Parameter Sorting: The initial sort order can be controlled via a sort URL parameter (total, gold, silver, bronze). If no parameter is provided, the default sort is 'Gold'.
-
-- Client-Side Sorting: Medal data is fetched once, and subsequent sorting operations are performed client-side without re-fetching data.
+- URL Parameter Sorting: The initial sort order can be controlled via a sort URL parameter (total, gold, silver, bronze). If no parameter is provided, the default sort is 'Gold'. (e.g. http://localhost:3000/?sort=total)
 
 ## Technologies Used
 
