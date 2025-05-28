@@ -24,10 +24,12 @@ export const useMedalTableData = () => {
   });
 
   const medalList = useMemo(() => {
-    return medalsData?.map((country: Country) => ({
-      ...country,
-      total: country.gold + country.silver + country.bronze,
-    }));
+    return medalsData
+      ?.map((country: Country) => ({
+        ...country,
+        total: country.gold + country.silver + country.bronze,
+      }))
+      .slice(0, 10);
   }, [medalsData]);
 
   useEffect(() => {

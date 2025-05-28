@@ -2,6 +2,7 @@ import { useQuery } from 'react-query';
 import api, { RequestError } from '@/app/api/api';
 import medalData from '@/app/data/medals.json';
 
+// data, error, loading, retry and cache logic is handled by react query
 export const useGetMedalList = ({
   params,
   requestKey,
@@ -24,7 +25,7 @@ export const useGetMedalList = ({
     },
     {
       refetchOnWindowFocus: false,
-      retry: 0,
+      retry: 3,
       enabled: !!params,
     }
   );
