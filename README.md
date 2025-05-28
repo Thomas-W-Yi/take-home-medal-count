@@ -9,29 +9,34 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Available Scripts
+## Features
 
-You can run the following scripts using npm:
+- Sortable Table: Users can sort countries by 'Gold', 'Silver', 'Bronze', or 'Total' medals.
 
-- `npm run build` - Build the application for production
-- `npm run start` - Sgtart the production server
-- `npm run lint` - Lint and auto-fix code
-- `npm run test` - Run unit tests with Jest
-- `npm run format` - Format code with Prettier
-- `npm run format:check` - Check code formatting
+- URL Parameter Sorting: The initial sort order can be controlled via a sort URL parameter (total, gold, silver, bronze). If no parameter is provided, the default sort is 'Gold'.
 
-First, run the development server (nvm use 20):
+- Client-Side Sorting: Medal data is fetched once, and subsequent sorting operations are performed client-side without re-fetching data.
+
+## Technologies Used
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS (styled component would be better)
+- Git/GitHub
+- axios (better handling of api call)
+- react-query (better way to handle data fetch, cache etc.)
 
 ## Project Limitations & Next Steps
 
 - **State Management:**  
   This project does not use Context or Redux for state management, as global state is minimal and such solutions would be overkill for the current requirements.
 
-- **Hardcoded Values:**  
-  Some values in the codebase are hardcoded and should be replaced with dynamic logic as requirements become clearer.
+- **Logging:**  
+  Logging tool (e.g. sentry) is missing due to time constraint.
 
-- **API Calls:**  
-  API calls are currently mocked using `medals.json`. Replace these mocks with real API endpoints when backend integration is ready.
+- **Resilience:**  
+  retries, fallback UI, and loading indicators are missing.
 
 - **Component Design:**  
   Most components are basic placeholders. They require improved design and clearer requirements to be fully implemented.
@@ -39,10 +44,10 @@ First, run the development server (nvm use 20):
 - **Styling Approach:**  
   Tailwind CSS is used for styling, but it can become verbose and less flexible for dynamic style variations. Consider migrating to a more scalable solution like [styled-components](https://styled-components.com/) or another CSS-in-JS library.
 
-- **Page Structure:**  
-  The project lacks a complete page structure. Add a header and footer to provide a consistent layout across all pages.
+- **Test Coverage:**  
+  Need to improve test coverage.
 
-- **E2E test with Cypress:**  
-  The project lacks E2E test since it's only a FE only at the moment. Need setup proper E2E test with Cypress.
+- **CI/CD Readiness:**  
+  Include pre-commit hooks, Github actions, etc. in real-world scenario.
 
 ---

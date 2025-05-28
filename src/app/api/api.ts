@@ -18,8 +18,26 @@ export interface RequestError {
   error: string;
 }
 
+const API_BASE_URL_DEFAULT = 'http://localhost:3000'; // Fallback URL
+
+// Get base URL from environment variable, with a fallback
+const API_BASE_URL =
+  process.env.NEXT_PUBLIC_API_BASE_URL || API_BASE_URL_DEFAULT;
+
+// Mock Data Endpoints: Use environment variables, with potential fallbacks or empty strings if not defined
+// If these are meant to be loaded from local JSON files, you might need a Next.js API route to serve them,
+// or use a separate fetch for static JSON files if they are in the `public` directory.
+export const MOCK_MEDALS_API_ENDPOINT =
+  process.env.NEXT_PUBLIC_MOCK_MEDALS_API || '';
+
 const api = axios.create({
-  baseURL: 'http://localhost:3000',
+  baseURL: API_BASE_URL,
+  timeout: 10000, // Example: 10 seconds timeout
+  headers: {
+    'Content-Type': 'application/json',
+    // You might add authorization headers here too, e.g., Bearer token
+    // 'Authorization': `Bearer ${localStorage.getItem('token')}`,
+  },
 });
 
 export function handleAxiosFailure(error) {
